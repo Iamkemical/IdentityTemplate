@@ -39,14 +39,14 @@ namespace IdentityAPIProject
                     .AddEntityFrameworkStores<AuthDbContext>()
                     .AddDefaultTokenProviders();
 
-            services.AddIdentity<User, Role>(options =>
-            {
-                options.Password.RequiredLength = 8;
-                options.Password.RequireNonAlphanumeric = true;
-                options.Password.RequireUppercase = true;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1d);
-                options.Lockout.MaxFailedAccessAttempts = 5;
-            });
+            //services.AddIdentity<User, Role>(options =>
+            //{
+            //    options.Password.RequiredLength = 8;
+            //    options.Password.RequireNonAlphanumeric = true;
+            //    options.Password.RequireUppercase = true;
+            //    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1d);
+            //    options.Lockout.MaxFailedAccessAttempts = 5;
+            //});
 
             services.AddAutoMapper(typeof(MappingProfile));
 
